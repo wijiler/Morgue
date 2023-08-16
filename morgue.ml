@@ -32,6 +32,7 @@ module Log = struct
                         | Reset -> print_endline(strjoin(["\x1B[0m";s]))
                         | Embolden -> print_endline(strjoin(["\x1B[1m";s;"\x1B[0m"]))
                         | Italics -> print_endline(strjoin(["\x1B[3m";s;"\x1B[0m"]));;
+        (* self describing *)
         let error s =
                 print_endline (strjoin(["\x1B[1m";"\x1B[31m";"[Morgue] Error: ";s;"\x1B[0m"]));
                 exit 0;;
